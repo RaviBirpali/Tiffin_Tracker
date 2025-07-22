@@ -1,0 +1,55 @@
+﻿# Ignore Visual Studio temporary files, build results, and
+# user-generated files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# VS Code settings
+.vscode/
+
+# Rider settings
+.idea/
+
+# VS2017 auto generated files
+Generated\ Files/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Visual Studio 2019
+.vs/
+
+# Npm packages
+node_modules/
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# DotCover
+*.dotCover
+
+# Others
+*.log
+*.tlog
+
+# Database files
+*.mdf
+*.ldf

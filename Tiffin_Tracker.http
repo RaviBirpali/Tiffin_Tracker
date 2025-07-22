@@ -1,0 +1,6 @@
+@Tiffin_Tracker_HostAddress = http://localhost:5253
+
+GET {{Tiffin_Tracker_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
