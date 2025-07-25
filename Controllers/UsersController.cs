@@ -10,8 +10,8 @@ using Tiffin_Tracker.Models;
 
 namespace Tiffin_Tracker.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class UsersController : ControllerBase
     {
         private readonly TiffinTrackerContext _context;
@@ -103,6 +103,33 @@ namespace Tiffin_Tracker.Controllers
         private bool UserExists(int id)
         {
             return _context.Users.Any(e => e.UserId == id);
+        }
+
+        // Get total number of users
+        [HttpGet("count")]
+        public IActionResult GetUserCount()
+        {
+            var count = _context.Users.Count();
+            return Ok(count);
+        }
+
+        // Get total number of unpaid users
+        [HttpGet("unpaid/count")]
+        public IActionResult GetUnpaidUserCount()
+        {
+            var now = DateTime.UtcNow;
+            var currentMonthStart = new DateTime(now.Year, now.Month, 1);
+
+            var unpaidUserCount = _context.Users
+                .Where(u => u.IsActive == true &&
+                    !_context.Payments.Any(p =>
+                        p.UserId == u.UserId &&
+                        p.PaymentPeriod >= currentMonthStart
+                    )
+                )
+                .Count();
+
+            return Ok(unpaidUserCount);
         }
     }
 }

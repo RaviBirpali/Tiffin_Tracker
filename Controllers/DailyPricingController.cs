@@ -10,8 +10,8 @@ using Tiffin_Tracker.Models;
 
 namespace Tiffin_Tracker.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class DailyPricingController : ControllerBase
     {
         private readonly TiffinTrackerContext _context;
@@ -104,5 +104,20 @@ namespace Tiffin_Tracker.Controllers
         {
             return _context.DailyPricings.Any(e => e.PriceId == id);
         }
+
+
+        [HttpGet("current")]
+        public IActionResult GetCurrentPricing()
+        {
+            var current = _context.DailyPricings
+                .OrderByDescending(p => p.PriceDate)
+                .FirstOrDefault();
+
+            if (current == null)
+                return BadRequest("No pricing record found.");
+
+            return Ok(current);
+        }
+
     }
 }

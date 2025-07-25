@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tiffin_Tracker", "Tiffin_Tracker.csproj", "{684DADCC-99B2-1C32-514A-85CAB0B22197}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tiffin_Tracker_UI", "..\Tiffin_Tracker_UI\Tiffin_Tracker_UI.csproj", "{80910129-BCAA-4EA3-B388-5568AB594596}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{684DADCC-99B2-1C32-514A-85CAB0B22197}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{684DADCC-99B2-1C32-514A-85CAB0B22197}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{684DADCC-99B2-1C32-514A-85CAB0B22197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80910129-BCAA-4EA3-B388-5568AB594596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80910129-BCAA-4EA3-B388-5568AB594596}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80910129-BCAA-4EA3-B388-5568AB594596}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80910129-BCAA-4EA3-B388-5568AB594596}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
